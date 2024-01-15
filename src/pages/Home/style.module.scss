@@ -1,0 +1,105 @@
+@import "../../styles/base.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  text-align: center;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.expired {
+  padding: 8rem 0;
+  h1 {
+    margin-bottom: 20px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+  }
+}
+body {
+  margin: 0;
+  color: $font-color;
+  font-family: $font-family;
+  font-weight: $font-weights;
+  background-color: $very-dark-blue;
+  min-height: 100vh;
+  background: url("../../assets/images/bg-stars.svg"),
+    url("../../assets/images/pattern-hills.svg"),
+    linear-gradient(hsl(235, 16%, 14%), hsl(235, 16%, 14%));
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% auto;
+  background-position: center center, bottom;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    padding: 8rem 0;
+    @include apply-at-md-size {
+      padding: 9rem 0;
+    }
+    .header {
+      text-align: center;
+      h1 {
+        letter-spacing: 7px;
+        margin: 0;
+        @include apply-at-md-size {
+          font-size: 24px;
+        }
+      }
+    }
+    .body-time {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      @include apply-at-md-size {
+        gap: 10px;
+      }
+      .item-time {
+        text-align: center;
+        .time {
+          color: $soft-red;
+          background-color: $dark-desaturated-blue;
+          border-radius: 10px;
+          padding: 30px 50px;
+          width: 120px;
+          height: 125px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 56px;
+          @include apply-at-md-size {
+            padding: 10px;
+            font-size: 36px;
+            width: 70px;
+            height: 75px;
+          }
+        }
+        h3 {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 7px;
+          margin-top: 10px;
+          @include apply-at-md-size {
+            font-size: 11px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
